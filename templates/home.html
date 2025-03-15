@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccine Reminder - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #034f64;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .add-button {
+            display: inline-block;
+            margin-bottom: 1rem;
+            padding: 10px 15px;
+            font-size: 1rem;
+            background-color: #034f64;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-button:hover {
+            background-color: #148dce89;
+        }
+
+        /* Dropdown button */
+        .dropdown-btn {
+            background-color:#034f64; /* Matches Add Data button color */
+             color: white;
+            padding: 10px 20px; /* Adjusted padding for consistent height */
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            text-align: center; /* Centers the text */
+             width: auto; /* Remove fixed width for flexibility */
+            height: 40px; /* Set a fixed height for consistency */
+            border-radius: 8px;
+            outline: none;
+            display: inline-block; /* Ensures buttons are aligned properly */
+            vertical-align: middle; /* Aligns with adjacent buttons */
+        }
+
+        /* Dropdown content */
+        .dropdown-content {
+            max-height: 0;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            transition: max-height 0.3s ease-out;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            width : 400px;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            color: black;
+        }
+        .dropdown-btn:hover{
+            background-color: #148dce89;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #dbe0ee;
+        }
+
+        /* Active dropdown content */
+        .dropdown-content.show {
+            max-height: 200px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #f2f2f2;
+        }
+
+        .actions button, .actions form button {
+            margin-right: 5px;
+            padding: 5px 10px;
+            font-size: 0.9rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .actions .reminder {
+            background-color: #296392;
+            color: white;
+        }
+
+        .actions .upload {
+            background-color: #151665;
+            color: white;
+        }
+
+        .actions .delete {
+            background-color: #4a0904;
+            color: white;
+        }
+
+        .actions .update {
+            background-color: #2c5186;
+            color: white;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 60%;
+            max-width: 400px;
+            height: 400px;
+            overflow-y: auto;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease;
+        }
+
+        .modal.show .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-content h3 {
+            margin-top: 0;
+        }
+
+        .modal-content label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .modal-content input, .modal-content button {
+            width: 100%;
+            margin-top: 5px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .modal-content button {
+            margin-top: 15px;
+            background-color: #45a049;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .modal-content button:hover {
+            background-color: #9cea9f;
+        }
+
+        .modal-content .cancel {
+            background-color: #f50404;
+        }
+
+        .modal-content .cancel:hover {
+            background-color: #ef6461;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome, {{ name }}!</h1>
+</header>
+
+<div class="container">
+    <button class="add-button" onclick="showAddDataForm()">Add Data</button>
+
+    <!-- Dropdown button -->
+    <!-- Dropdown button -->
+<button class="dropdown-btn" onclick="toggleDropdown()">Vaccine Information <span>&#x2193;</span></button>
+<div class="dropdown-content" id="dropdownContent">
+    <a href="{{ url_for('what_are') }}">What is this term called "Vaccine"</a>
+    <a href="{{ url_for('adult_vacine') }}">About Child(1 to 12 years) and Teenager(13 to 19 years)  and Adult Vaccination</a>
+    <a href="{{ url_for('infant_vaccine') }}">About Infant Vaccination (Infant: 4–52 weeks)</a>
+    <a href="{{ url_for('mother_to_be') }}">About Pregnant Individual</a> <!-- New Link -->
+</div>
+
+
+    <h2>Persons and Their Vaccine Details</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Person Name</th>
+                <th>Relation</th>
+                <th>Age</th>
+                <th>Vaccine Name</th>
+                <th>Vaccination Date</th>
+                <th>Next Dosage Date</th>
+                <th>Uploaded Documents</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for person in persons_data %}
+            <tr>
+                <td>{{ person.person_name }}</td>
+                <td>{{ person.relation }}</td>
+                <td>{{ person.age }}</td>
+                <td>{{ person.vaccine_name }}</td>
+                <td>{{ person.vaccination_date }}</td>
+                <td>{{ person.next_dosage_date }}</td>
+                <td>
+                    {% if person.documents %}
+                    <ul>
+                        {% for doc in person.documents %}
+                        <li><a href="{{ url_for('uploaded_file', filename=doc) }}">{{ doc }}</a></li>
+                        {% endfor %}
+                    </ul>
+                    {% else %}
+                    No documents uploaded
+                    {% endif %}
+                </td>
+                <td class="actions">
+                    <button class="reminder" onclick="showReminderForm('{{ person._id }}')">Reminder Me</button>
+                    <form method="POST" action="{{ url_for('upload_document', person_id=person._id) }}" enctype="multipart/form-data" style="display:inline;">
+                        <input type="file" name="document">
+                        <button class="upload">Upload</button>
+                    </form>
+                    <form method="POST" action="{{ url_for('delete_entry', person_id=person._id) }}" style="display:inline;">
+                        <button class="delete">Delete</button>
+                    </form>
+                    <form method="GET" action="{{ url_for('update', row_id=person._id) }}" style="display:inline;">
+                        <button class="update">Update</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="modal" id="addDataForm">
+    <div class="modal-content">
+        <h3>Add Person and Vaccine Data</h3>
+        <form method="POST" action="{{ url_for('add_entry') }}" enctype="multipart/form-data">
+            <label for="person_name">Person Name:</label>
+            <input type="text" id="person_name" name="person_name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="0" required>
+
+            <label for="relation">Relation (optional):</label>
+            <input type="text" id="relation" name="relation">
+
+            <label for="vaccine_name">Vaccine Name:</label>
+            <input type="text" id="vaccine_name" name="vaccine_name" required>
+
+            <label for="vaccination_date">Vaccination Date:</label>
+            <input type="date" id="vaccination_date" name="vaccination_date" required>
+
+            <label for="next_dosage_date">Next Dosage Date (optional):</label>
+            <input type="date" id="next_dosage_date" name="next_dosage_date">
+
+            <label for="document">Upload Documents (optional):</label>
+            <input type="file" id="document" name="document" accept=".pdf, .png, .jpg, .jpeg">
+
+            <button type="submit">Submit</button>
+            <button type="button" class="cancel" onclick="hideAddDataForm()">Cancel</button>
+        </form>
+    </div>
+</div>
+
+<div class="modal" id="reminderForm">
+    <div class="modal-content">
+        <h3>Send Reminder</h3>
+        <form method="POST" id="reminderFormInner">
+            <label for="phone_number">Enter Phone Number (with country code):</label>
+            <input type="text" id="phone_number" name="phone_number" placeholder="+1234567890" required>
+            <button type="submit">Send Reminder</button>
+            <button type="button" class="cancel" onclick="closeReminderForm()">Cancel</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function toggleDropdown() {
+    const dropdown = document.getElementById('dropdownContent');
+    dropdown.classList.toggle('show');
+    }
+
+    function redirectTo(url) {
+        window.location.href = url; // Navigate to the provided URL
+    }
+
+    function showAddDataForm() {
+        const modal = document.getElementById("addDataForm");
+        modal.style.display = "flex";
+        setTimeout(() => modal.classList.add("show"), 10);
+    }
+
+    function hideAddDataForm() {
+        const modal = document.getElementById("addDataForm");
+        modal.classList.remove("show");
+        setTimeout(() => modal.style.display = "none", 300);
+    }
+
+    function showReminderForm(personId) {
+        const form = document.querySelector('#reminderFormInner');
+        form.action = `/send_reminder/${personId}`;
+        const modal = document.getElementById('reminderForm');
+        modal.style.display = 'flex';
+        setTimeout(() => modal.classList.add("show"), 10);
+    }
+
+    function closeReminderForm() {
+        const modal = document.getElementById('reminderForm');
+        modal.classList.remove("show");
+        setTimeout(() => modal.style.display = "none", 300);
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adult Vaccination Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 1s ease-out;
+        }
+        header {
+            background-color: #6aadf4;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            animation: slideInFromTop 1s ease-out;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-out;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #6aadf4;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #6aadf4;
+            padding: 10px 20px;
+            border-radius: 5px;
+            animation: fadeIn 3s ease-out;
+        }
+        a:hover {
+            background-color: #5696d1;
+        }
+        .facts-section {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2.5s ease-out;
+        }
+        .facts-section h2 {
+            color: #6aadf4;
+        }
+        tr:hover {
+            background-color: #d1e7ff;
+            cursor: pointer;
+            transform: scale(1.03);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromTop {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Vaccination Dashboard</h1>
+</header>
+
+<div class="container">
+
+    <!-- Child Vaccination Table -->
+    <h2>Child(1 to 12 years) Vaccination Schedule</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Vaccine</th>
+                <th>When to Give</th>
+                <th>Dosage</th>
+                <th>Route</th>
+                <th>Site</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Diphtheria, Pertussis & Tetanus (DPT) Booster-1</td>
+                <td>16-24 months</td>
+                <td>0.5 ml</td>
+                <td>Intra-muscular</td>
+                <td>Antero-lateral side of mid-thigh</td>
+            </tr>
+            <tr>
+                <td>MR 2nd dose</td>
+                <td>16-24 months</td>
+                <td>0.5 ml</td>
+                <td>Sub-cutaneous</td>
+                <td>Right upper arm</td>
+            </tr>
+            <tr>
+                <td>OPV Booster</td>
+                <td>16-24 months</td>
+                <td>2 drops</td>
+                <td>Oral</td>
+                <td>Oral</td>
+            </tr>
+            <tr>
+                <td>JE-2</td>
+                <td>16-24 months</td>
+                <td>0.5 ml</td>
+                <td>Sub-cutaneous (Live attenuated vaccine)</td>
+                <td>Left upper arm (Killed vaccine)</td>
+            </tr>
+            <tr>
+                <td>Vitamin A (2nd to 9th dose)</td>
+                <td>16-18 months, then one dose every 6 months up to age 5</td>
+                <td>2 ml (2 lakh IU)</td>
+                <td>Oral</td>
+                <td>Oral</td>
+            </tr>
+            <tr>
+                <td>DPT Booster-2</td>
+                <td>5-6 years</td>
+                <td>0.5 ml</td>
+                <td>Intra-muscular</td>
+                <td>Upper arm</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Teenager Vaccination Table -->
+    <h2>Teenager(13 to 19 years) Vaccination Schedule</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Vaccine</th>
+                <th>When to Give</th>
+                <th>Dosage</th>
+                <th>Route</th>
+                <th>Site</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Diphtheria, Pertussis & Tetanus (DPT) Booster-1</td>
+                <td>16-24 months</td>
+                <td>0.5 ml</td>
+                <td>Intra-muscular</td>
+                <td>Antero-lateral side of mid-thigh</td>
+            </tr>
+            <tr>
+                <td>MR 2nd dose</td>
+                <td>16-24 months</td>
+                <td>0.5 ml</td>
+                <td>Sub-cutaneous</td>
+                <td>Right upper arm</td>
+            </tr>
+            <tr>
+                <td>OPV Booster</td>
+                <td>16-24 months</td>
+                <td>2 drops</td>
+                <td>Oral</td>
+                <td>Oral</td>
+            </tr>
+            <tr>
+                <td>JE-2</td>
+                <td>16-24 months</td>
+                <td>0.5 ml</td>
+                <td>Sub-cutaneous (Live attenuated vaccine)</td>
+                <td>Left upper arm (Killed vaccine)</td>
+            </tr>
+            <tr>
+                <td>Vitamin A (2nd to 9th dose)</td>
+                <td>16-18 months, then one dose every 6 months up to age 5</td>
+                <td>2 ml (2 lakh IU)</td>
+                <td>Oral</td>
+                <td>Oral</td>
+            </tr>
+            <tr>
+                <td>DPT Booster-2</td>
+                <td>5-6 years</td>
+                <td>0.5 ml</td>
+                <td>Intra-muscular</td>
+                <td>Upper arm</td>
+            </tr>
+            <tr>
+                <td>Td</td>
+                <td>10 years & 16 years</td>
+                <td>0.5 ml</td>
+                <td>Intra-muscular</td>
+                <td>Upper arm</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Adult & Elderly Vaccination Table -->
+    <h2>Adult & Elderly (20+ years) Vaccination Schedule</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Vaccine</th>
+                <th>When to Give</th>
+                <th>Dosage</th>
+                <th>Route</th>
+                <th>Site</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Influenza Vaccine</td>
+                <td>Annually (Starting from 20 years)</td>
+                <td>0.5 ml</td>
+                <td>Intra-muscular</td>
+                <td>Upper arm</td>
+            </tr>
+            <tr>
+                <td>Hepatitis B Vaccine</td>
+                <td>3 doses (0, 1, and 6 months)</td>
+                <td>1 ml</td>
+                <td>Intra-muscular</td>
+                <td>Deltoid muscle</td>
+            </tr>
+            <tr>
+                <td>Pneumococcal Vaccine</td>
+                <td>Once, or every 5 years for those at high risk (65+ years)</td>
+                <td>0.5 ml</td>
+                <td>Intra-muscular</td>
+                <td>Upper arm</td>
+            </tr>
+            <tr>
+                <td>Shingles Vaccine</td>
+                <td>Once, starting at age 50</td>
+                <td>0.5 ml</td>
+                <td>Intra-muscular</td>
+                <td>Upper arm</td>
+            </tr>
+            <tr>
+                <td>Tetanus, Diphtheria & Pertussis (Tdap)</td>
+                <td>Once, followed by Td every 10 years</td>
+                <td>0.5 ml</td>
+                <td>Intra-muscular</td>
+                <td>Upper arm</td>
+            </tr>
+            <tr>
+                <td>COVID-19 Vaccine</td>
+                <td>2 doses followed by boosters (depending on the vaccine)</td>
+                <td>0.5 ml</td>
+                <td>Intra-muscular</td>
+                <td>Upper arm</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Facts Section -->
+    <div class="facts-section">
+        <h2>Why Vaccines Matter ?</h2>
+        <ul>
+            <li>Vaccines help to prevent the spread of dangerous diseases and maintain public health.</li>
+            <li>Immunization schedules are designed to ensure that individuals are protected at the right age.</li>
+            <li>Some vaccines require boosters to maintain immunity throughout life.</li>
+            <li>Vaccines are administered at different ages for maximum protection, from childhood through adulthood.</li>
+        </ul>
+    </div>
+
+    <a href="/">Back to Home</a>
+</div>
+
+</body>
+</html>

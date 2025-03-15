@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infant Vaccination Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            animation: fadeIn 2s ease-out;
+        }
+
+        header {
+            background-color: #6aadf4;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 20px;
+            width: 100%;
+            align-self: center;
+            animation: slideInFromTop 1s ease-out;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeInUp 2s ease-out forwards;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #d1e7ff;
+            cursor: pointer;
+            transform: scale(1.03);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #6aadf4;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            background-color: #428bca;
+            transform: scale(1.1);
+        }
+
+        .facts-section {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-top: 2rem;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeInUp 2s ease-out forwards;
+        }
+
+        .facts-section h2 {
+            color: #6aadf4;
+            margin-bottom: 10px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .facts-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .facts-section ul li {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInFromTop {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Infant Vaccination Dashboard</h1>
+    </header>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Vaccine</th>
+                    <th>When to Give</th>
+                    <th>Dosage</th>
+                    <th>Route</th>
+                    <th>Site</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bacillus Calmette Guerin (BCG)</td>
+                    <td>At birth or as early as possible till one year of age</td>
+                    <td>0.1 ml (0.05 ml until 1 month age)</td>
+                    <td>Intra-dermal</td>
+                    <td>Left Upper Arm</td>
+                </tr>
+                <tr>
+                    <td>Hepatitis B - Birth dose</td>
+                    <td>At birth or as early as possible within 24 hours</td>
+                    <td>0.5 ml</td>
+                    <td>Intra-muscular</td>
+                    <td>Antero-lateral side of mid thigh</td>
+                </tr>
+                <tr>
+                    <td>Oral Polio Vaccine (OPV)-0</td>
+                    <td>At birth or as early as possible within the first 15 days</td>
+                    <td>2 drops</td>
+                    <td>Oral</td>
+                    <td>Oral</td>
+                </tr>
+                <tr>
+                    <td>OPV 1, 2 & 3</td>
+                    <td>At 6 weeks, 10 weeks & 14 weeks (can be given till 5 years of age)</td>
+                    <td>2 drops</td>
+                    <td>Oral</td>
+                    <td>Oral</td>
+                </tr>
+                <tr>
+                    <td>Pentavalent 1, 2 & 3</td>
+                    <td>At 6 weeks, 10 weeks & 14 weeks (can be given till one year of age)</td>
+                    <td>0.5 ml</td>
+                    <td>Intra-muscular</td>
+                    <td>Antero-lateral side of mid thigh</td>
+                </tr>
+                <tr>
+                    <td>Pneumococcal Conjugate Vaccine (PCV)</td>
+                    <td>Two primary doses at 6 and 14 weeks followed by booster dose at 9-12 months</td>
+                    <td>0.5 ml</td>
+                    <td>Intra-muscular</td>
+                    <td>Antero-lateral side of mid thigh</td>
+                </tr>
+                <tr>
+                    <td>Rotavirus (RVV)</td>
+                    <td>At 6 weeks, 10 weeks & 14 weeks (can be given till one year of age)</td>
+                    <td>5 drops (liquid vaccine), 2.5 ml (lyophilized vaccine)</td>
+                    <td>Oral</td>
+                    <td>Oral</td>
+                </tr>
+                <tr>
+                    <td>Inactivated Polio Vaccine (IPV)</td>
+                    <td>Two fractional doses at 6 and 14 weeks of age</td>
+                    <td>0.1 ml</td>
+                    <td>Intra-dermal</td>
+                    <td>Right upper arm</td>
+                </tr>
+                <tr>
+                    <td>Measles Rubella (MR) 1st dose</td>
+                    <td>9 completed months - 12 months (can be given till 5 years of age)</td>
+                    <td>0.5 ml</td>
+                    <td>Sub-cutaneous</td>
+                    <td>Right upper arm</td>
+                </tr>
+                <tr>
+                    <td>Japanese Encephalitis (JE) - 1</td>
+                    <td>9 completed months - 12 months</td>
+                    <td>0.5 ml</td>
+                    <td>Sub-cutaneous (Live attenuated vaccine), Intramuscular (Killed vaccine)</td>
+                    <td>Left upper arm (Live attenuated), Anterolateral aspect of mid thigh (Killed)</td>
+                </tr>
+                <tr>
+                    <td>Vitamin A (1st dose)</td>
+                    <td>At 9 completed months with measles-Rubella</td>
+                    <td>1 ml (1 lakh IU)</td>
+                    <td>Oral</td>
+                    <td>Oral</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="facts-section">
+            <h2>Why Infant Vaccines Matter</h2>
+            <ul>
+                <li><strong>Protecting against serious diseases:</strong> Vaccines help protect infants from life-threatening diseases like polio, measles, and whooping cough.</li>
+                <li><strong>Early protection:</strong> Vaccinating infants at the right time ensures early immunity before they are exposed to these diseases.</li>
+                <li><strong>Herd immunity:</strong> Vaccinating infants helps protect others in the community, especially those who cannot be vaccinated, by creating herd immunity.</li>
+                <li><strong>Long-term health:</strong> Vaccination provides long-term protection, reducing the risk of illnesses throughout childhood and adulthood.</li>
+                <li><strong>Safe and effective:</strong> Infant vaccines are tested for safety and effectiveness before being approved by health authorities, making them one of the safest preventive measures available.</li>
+                <li><strong>Reducing healthcare costs:</strong> Vaccination can reduce healthcare costs by preventing hospitalizations and the long-term effects of preventable diseases.</li>
+            </ul>
+        </div>
+
+        <a href="/">Back to Home</a>
+    </main>
+</body>
+</html>

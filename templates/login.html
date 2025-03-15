@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #00B4D8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('covid-vaccine-web.png'); /* Set the background image */
+            background-size: cover;
+            background-position: center;
+            background: url('/static/covid-vaccine-web.png')
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .login-container h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .login-container label {
+            font-size: 14px;
+            text-align: left;
+            display: block;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .login-container input, .login-container select {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+        }
+        .login-container input:focus, .login-container select:focus {
+            border-color: #00B4D8;
+            outline: none;
+        }
+        .login-container input[type="submit"] {
+            background-color: #00B4D8;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            padding: 14px;
+        }
+        .login-container input[type="submit"]:hover {
+            background-color: #008C99;
+        }
+        .login-container p {
+            font-size: 14px;
+            color: #333;
+        }
+        .login-container a {
+            color: #00B4D8;
+            text-decoration: none;
+        }
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Welcome Back!</h2>
+        <form action="{{ url_for('login') }}" method="POST">
+            <label for="country_code">Country Code:</label>
+            <select id="country_code" name="country_code" required>
+                <option value="+1">+1 (USA)</option>
+                <option value="+91" selected>+91 (India)</option>
+                <option value="+44">+44 (UK)</option>
+                <option value="+61">+61 (Australia)</option>
+                <option value="+81">+81 (Japan)</option>
+                <!-- Add more country codes as needed -->
+            </select>
+
+            <label for="phno">Phone Number:</label>
+            <input type="text" id="phno" name="phno" placeholder="Enter your phone number" required>
+
+            <label for="pin">PIN:</label>
+            <input type="password" id="pin" name="pin" placeholder="Enter your PIN" required>
+
+            <input type="submit" value="Sign In">
+        </form>
+        <p>Don't have an account? <a href="{{ url_for('signup') }}">Sign up here</a></p>
+    </div>
+</body>
+</html>

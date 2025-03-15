@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Are Vaccines?</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header {
+            background-color: #6aadf4;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .question {
+            margin: 30px auto;
+            max-width: 600px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        .question-title {
+            font-size: 1.8em;
+            color: #007BFF;
+            margin-bottom: 10px;
+        }
+
+        .answer {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 30px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+        }
+
+        .back-link:hover {
+            background-color: #0056b3;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .question:nth-child(odd) {
+            animation-delay: 0.3s;
+        }
+
+        .question:nth-child(even) {
+            animation-delay: 0.6s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>What Are Vaccines?</h1>
+    </header>
+
+    <main>
+        <section class="question" id="discovered">
+            <h2 class="question-title">Who Discovered the Vaccine?</h2>
+            <p class="answer">The vaccine was first discovered by Edward Jenner in 1796. He developed the first successful smallpox vaccine after noticing that milkmaids who had contracted cowpox did not get smallpox.</p>
+        </section>
+
+        <section class="question" id="what_is">
+            <h2 class="question-title">What Is a Vaccine?</h2>
+            <p class="answer">A vaccine is a biological substance that provides immunity to a specific disease. It contains an agent that resembles a disease-causing microorganism, stimulating the body’s immune response.</p>
+        </section>
+
+        <section class="question" id="first_vaccine">
+            <h2 class="question-title">Which Is the First Vaccine?</h2>
+            <p class="answer">The first vaccine ever developed was the smallpox vaccine by Edward Jenner in 1796. This was a major breakthrough in preventing infectious diseases.</p>
+        </section>
+
+        <!-- More India-specific facts about vaccines -->
+        <section class="question" id="india_vaccine_impact">
+            <h2 class="question-title">What Is the Impact of Vaccination in India?</h2>
+            <p class="answer">
+                India has made significant strides in vaccination coverage over the years. The government’s Universal Immunization Program (UIP) aims to provide free vaccination to children against diseases like polio, tuberculosis, hepatitis B, and more. 
+                This has resulted in the near-eradication of polio in India, with the country being declared polio-free by the World Health Organization (WHO) in 2014.
+            </p>
+        </section>
+
+        <section class="question" id="importance_india">
+            <h2 class="question-title">Why Are Vaccines Important in India?</h2>
+            <p class="answer">
+                India, with its vast population, faces challenges like poor sanitation and crowded living conditions, which make it more vulnerable to infectious diseases. Vaccines help reduce the spread of diseases and prevent outbreaks. 
+                The immunization coverage in India has dramatically improved over the years, leading to a decrease in childhood mortality rates.
+            </p>
+        </section>
+
+        <section class="question" id="indian_vaccine_coverage">
+            <h2 class="question-title">What Is the Vaccination Coverage in India?</h2>
+            <p class="answer">
+                As of 2021, India has made remarkable progress in its vaccination coverage, reaching over 60% of children with essential vaccines under the UIP. The government continues to push for complete immunization through programs like the Mission Indradhanush, which aims to vaccinate every child in underserved areas.
+            </p>
+        </section>
+
+        <section class="question" id="covid_vaccine_india">
+            <h2 class="question-title">What About COVID-19 Vaccination in India?</h2>
+            <p class="answer">
+                India launched its massive COVID-19 vaccination drive in January 2021, one of the world’s largest vaccination campaigns. With vaccines like Covishield and Covaxin, millions of people have been vaccinated across the country to curb the pandemic's spread.
+            </p>
+        </section>
+
+        <!-- Additional Facts -->
+        <section class="question" id="vaccine_innovation">
+            <h2 class="question-title">What Are Some Recent Vaccine Innovations in India?</h2>
+            <p class="answer">
+                India has become a global leader in vaccine manufacturing. In addition to producing vaccines for diseases like polio, tuberculosis, and hepatitis, India has contributed to the development of new vaccines such as the Covaxin and Covishield for COVID-19. Indian pharmaceutical companies like Serum Institute of India and Bharat Biotech play a crucial role in producing affordable vaccines for both domestic and global use.
+            </p>
+        </section>
+
+        <section class="question" id="vaccine_access_in_india">
+            <h2 class="question-title">How Accessible Are Vaccines in India?</h2>
+            <p class="answer">
+                Vaccination accessibility has improved significantly in India through initiatives like the Mission Indradhanush and efforts by state governments and NGOs. Despite challenges in remote areas, India’s vaccination programs have reached millions through mobile vaccination units and public health campaigns, helping to ensure vaccines reach the most underserved populations.
+            </p>
+        </section>
+
+        <section class="question" id="vaccine_awareness_in_india">
+            <h2 class="question-title">What Is Being Done to Raise Vaccine Awareness in India?</h2>
+            <p class="answer">
+                To combat vaccine misinformation, India has been focusing on awareness campaigns, targeting rural and underserved areas. The government has partnered with organizations like UNICEF to educate the public on the importance of vaccines. Community health workers and local leaders play a vital role in encouraging families to vaccinate their children, and social media platforms have been used to spread positive messages about immunization.
+            </p>
+        </section>
+
+        <a href="/" class="back-link">Back to Home</a>
+    </main>
+
+    <script>
+        // Optional JavaScript for more animations or interactivity can be added here
+    </script>
+</body>
+</html>

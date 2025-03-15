@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccination Dashboard for Pregnant Individuals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            animation: fadeInBody 1s ease-in-out;
+        }
+
+        header {
+            background-color: #6aadf4;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 20px;
+            width: 100%;
+            animation: slideInFromTop 1s ease-out;
+        }
+
+        main {
+            padding: 2rem;
+            animation: fadeInMain 1.5s ease-out;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            animation: fadeInText 1s ease-out;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            animation: tableFadeIn 1.5s ease-out;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #6aadf4;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            animation: fadeInButton 1s ease-out;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            background-color: #007bff;
+            transform: scale(1.1);
+        }
+
+        .facts {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #e9f7ef;
+            border-left: 5px solid #28a745;
+            animation: fadeInFacts 2s ease-out;
+        }
+
+        .facts ul {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+
+        tr:hover {
+            background-color: #d1e7ff;
+            cursor: pointer;
+            transform: scale(1.03);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        /* Animations */
+        @keyframes fadeInBody {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInMain {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes tableFadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInButton {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInFacts {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dashboard for Pregnant Individuals</h1>
+    </header>
+    <main>
+        <p>
+            Below is the recommended vaccination schedule for pregnant individuals. Ensure to consult your healthcare provider for personalized advice.
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Vaccine</th>
+                    <th>When to Give</th>
+                    <th>Dose</th>
+                    <th>Route</th>
+                    <th>Site</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tetanus & Adult Diphtheria (Td) - 1</td>
+                    <td>Early in pregnancy</td>
+                    <td>0.5 ml</td>
+                    <td>Intra-muscular</td>
+                    <td>Upper Arm</td>
+                </tr>
+                <tr>
+                    <td>Td - 2</td>
+                    <td>4 weeks after Td-1</td>
+                    <td>0.5 ml</td>
+                    <td>Intra-muscular</td>
+                    <td>Upper Arm</td>
+                </tr>
+                <tr>
+                    <td>Td - Booster</td>
+                    <td>If received 2 TT/Td doses in a pregnancy within the last 3 years*</td>
+                    <td>0.5 ml</td>
+                    <td>Intra-muscular</td>
+                    <td>Upper Arm</td>
+                </tr>
+                <tr>
+                    <td>Influenza Vaccine</td>
+                    <td>Anytime during pregnancy (preferably before flu season)</td>
+                    <td>0.5 ml</td>
+                    <td>Intra-muscular</td>
+                    <td>Upper Arm</td>
+                </tr>
+                <tr>
+                    <td>COVID-19 Vaccine</td>
+                    <td>Anytime during pregnancy</td>
+                    <td>As per protocol</td>
+                    <td>Intra-muscular</td>
+                    <td>Upper Arm</td>
+                </tr>
+                <tr>
+                    <td>Hepatitis B Vaccine</td>
+                    <td>For mothers at risk (consult healthcare provider)</td>
+                    <td>1 ml</td>
+                    <td>Intra-muscular</td>
+                    <td>Upper Arm</td>
+                </tr>
+                <tr>
+                    <td>Pertussis Vaccine (Tdap)</td>
+                    <td>Between 27-36 weeks of gestation</td>
+                    <td>0.5 ml</td>
+                    <td>Intra-muscular</td>
+                    <td>Upper Arm</td>
+                </tr>
+                <tr>
+                    <td>Group B Streptococcus (GBS) Vaccine</td>
+                    <td>When available and recommended by healthcare provider</td>
+                    <td>As per protocol</td>
+                    <td>Intra-muscular</td>
+                    <td>Upper Arm</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>* Ensure vaccination records are up to date to determine booster eligibility.</p>
+
+        <div class="facts">
+            <h2>Pregnancy and Immunization: What You Need to Know</h2>
+            <ul>
+                <li>Vaccines like Tdap and influenza are safe and highly recommended during pregnancy to protect both the mother and the baby.</li>
+                <li>Vaccination during pregnancy can provide passive immunity to the newborn, protecting them in the first few months of life.</li>
+                <li>Pregnant individuals should avoid live vaccines (e.g., MMR and varicella) during pregnancy.</li>
+                <li>The COVID-19 vaccine is recommended for pregnant individuals to reduce severe illness risks.</li>
+                <li>Consult a healthcare provider to ensure all vaccinations are given at the right time and dose.</li>
+            </ul>
+        </div>
+
+        <a href="{{ url_for('home') }}">Back to Home</a>
+    </main>
+</body>
+</html>
